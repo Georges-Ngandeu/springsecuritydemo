@@ -1,0 +1,39 @@
+spring:
+    jpa:
+        generate-ddl: true
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+        hibernate:
+            ddl-auto: update
+    datasource:
+        url: jdbc:mysql://localhost:3306/spring_security_api
+        username: ${database_username}
+        password: ${database_password}
+        driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+    port: 8080
+
+# springdoc:
+#   swagger-ui:
+#     path: /swagger-ui.html
+#     operationsSorter: method
+#   packagesToScan: com.example.demo.controller
+#   packages-to-exclude: com.example.demo.entity
+#   api-docs:
+#     path: /v1/api-docs
+
+application:
+    name: spring-security-api
+    version: 1.0.0
+    description: Spring Security API Demo
+    base-package: com.example.demo
+    api-version: v1
+    contact:
+        name: Georges Ngandeu
+        email:
+        
+jwt:
+    jwtsecret: jwtsecret
+    jwtExpirationTime: 36000000
